@@ -1,0 +1,6 @@
+<p><a [routerLink]="['create']">Create Entry</a></p>
+<div *ngFor="let journal of journals">
+  <h4>{{ journal.title }}</h4>
+  <p>{{ journal.date | date: 'dd/MM/yyyy'}}</p>
+  <a [routerLink]="['entry', journal._id]">View Entry</a>
+</div>

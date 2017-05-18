@@ -1,0 +1,10 @@
+<div>
+  <form (submit)="createForm.valid && createEntry()" #createForm="ngForm" novalidate>
+      <label for="title">Title:</label>
+      <input name="title" type="text" [(ngModel)]="entry.title" required>
+      <label for="content">Content:</label>
+      <textarea name="content" [(ngModel)]="entry.content" required></textarea>
+    <button>Create Entry</button>
+  </form>
+  <a [routerLink]="['']">Go to Home!</a>
+</div>
